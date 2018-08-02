@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>JavaScript Promise</title>
+</head>
+<body>
+    <h4>This is the simple example of JS Promise</h4>
+    
+    <script>
+        var promise = new Promise(function(resolve,reject){
+           setTimeout(resolve, 100, "Hi");
+        });
+        
+        promise.then(function(value){
+            console.log(value);
+        });
+
+    </script>
+
+
+</body>
+</html>
