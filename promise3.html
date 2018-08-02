@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>JavaScript Promise</title>
+</head>
+<body>
+    <h4>This is the second example of JS Promise where you an see success and error handling function for promise</h4>
+    
+    <script>
+        var promise = function(inputValue) {
+            return new Promise(function(resolve,reject){
+                if(inputValue == 1) {
+                    setTimeout(resolve, 100, "Good to see your positive feedback!!!");
+                } else {
+                    setTimeout(reject, 100, "Will do our best for you");
+                }                
+            });    
+
+        }
+
+        function successHandler(value){
+            console.log("Sucess :", value);
+        }
+        function errorHandler(error) {
+            console.info("Error :", error);
+        }
+        
+        promise(1).then(successHandler, errorHandler);
+        promise(2).then(successHandler, errorHandler);
+
+    </script>
+</body>
+</html>
